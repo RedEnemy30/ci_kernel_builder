@@ -1,0 +1,27 @@
+env:
+    TG_CHAT_ID: "5140615328"
+    TZ: "Asia/Kolkata"
+
+task:
+  name: "ci_kernel_builder"
+  timeout_in: 120m  
+  container:
+      image: marvelmathesh/docker:rom
+      cpu: 4
+      memory: 8G
+
+  Build-Env-Setup_background_script:
+       - export DEBIAN_FRONTEND=noninteractive
+       - apt update
+       - apt install sudo
+       - DEBIAN_FRONTEND=noninteractive
+       - mkdir -p /tmp/ccache
+       - cd /tmp
+
+  Storage-Checker_background_script:
+      - df -h
+      - lsblk
+      - ls -l -a -h
+
+  Build_script:
+      - bash kernel.sh
