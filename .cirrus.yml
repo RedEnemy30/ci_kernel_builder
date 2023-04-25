@@ -7,8 +7,8 @@ task:
   timeout_in: 120m  
   container:
       image: marvelmathesh/docker:rom
-      cpu: 4
-      memory: 8G
+      cpu: 6
+      memory: 12G
 
   Build-Env-Setup_background_script:
        - export DEBIAN_FRONTEND=noninteractive
@@ -17,11 +17,6 @@ task:
        - DEBIAN_FRONTEND=noninteractive
        - mkdir -p /tmp/ccache
        - cd /tmp
-
-  Storage-Checker_background_script:
-      - df -h
-      - lsblk
-      - ls -l -a -h
 
   Build_script:
       - bash kernel.sh
