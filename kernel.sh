@@ -10,6 +10,13 @@ KT_BRANCH=13 #your_branch
 # Cloning kernel
 git clone $KT_LINK -b $KT_BRANCH --depth=1 --single-branch
 
+#tg
+tg(){
+	curl -s "https://api.telegram.org/bot5257990735:AAFy_Paa75GL8qsGTXCWMM4ImX8eY9H0icE/sendmessage" --data "text=$msg&chat_id=5140615328&parse_mode=html"
+}
+id=5140615328 
+tg $id "kernel compile status: triggered!"
+
 cd *
 
 # Beginning compilation
