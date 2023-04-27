@@ -75,7 +75,7 @@ if [ -f "out/arch/arm64/boot/Image.gz-dtb" ]; then
 	rm -rf AnyKernel3
 	echo -e "\nCompleted in $((SECONDS / 60)) minute(s) and $((SECONDS % 60)) second(s) !"
 	echo "Zip: $ZIPNAME"
-	curl -F document=@"$ZIPNAME" "https://api.telegram.org/bot5257990735:AAFy_Paa75GL8qsGTXCWMM4ImX8eY9H0icE/sendDocument" -F chat_id="5140615328" -F "parse_mode=Markdown" -F caption="*✅ Build finished after $((DIFF / 60)) minute(s) and $((DIFF % 60)) seconds*"
+	curl -F document=@"$ZIPNAME" "https://api.telegram.org/bot5257990735:AAFy_Paa75GL8qsGTXCWMM4ImX8eY9H0icE/sendDocument" -F chat_id="5140615328" -F "parse_mode=Markdown" -F caption="*✅ Build finished after $((SECONDS / 60)) minute(s) and $((SECONDS % 60)) second(s)*"
 	echo
         curl -sL https://git.io/file-transfer | sh
         ./transfer anon $ZIPNAME
