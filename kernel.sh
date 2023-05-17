@@ -4,8 +4,8 @@
 cd /tmp/rom
 
 # Replace with your kernel link and branch
-KT_LINK=https://github.com/popoA3M/kernel_10or_E-3.18.git #your_kernel_link
-KT_BRANCH=main #your_branch
+KT_LINK=https://github.com/popoA3M-World/kernel_10or_E #your_kernel_link
+KT_BRANCH=LA.UM.8.6.2.r1/lineage-master #your_branch
 
 # Cloning kernel
 git clone $KT_LINK -b $KT_BRANCH --depth=1 --single-branch
