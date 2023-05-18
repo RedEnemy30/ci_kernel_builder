@@ -4,8 +4,8 @@
 cd /tmp/rom
 
 # Replace with your kernel link and branch
-KT_LINK=https://github.com/popoA3M-World/kernel_10or_E #your_kernel_link
-KT_BRANCH=LA.UM.8.6.2.r1/lineage-master #your_branch
+KT_LINK=https://github.com/popoA3M/kernel #your_kernel_link
+KT_BRANCH=new #your_branch
 
 # Cloning kernel
 git clone $KT_LINK -b $KT_BRANCH --depth=1 --single-branch
@@ -62,7 +62,7 @@ make -j"$(nproc --all)" O=out ARCH=arm64 CC=clang AR=llvm-ar NM=llvm-nm OBJCOPY=
 
 if [ -f "out/arch/arm64/boot/Image.gz-dtb" ]; then
 	echo -e "\nKernel compiled succesfully! Zipping up...\n"
-	if ! git clone -q https://github.com/popoASM-World/AnyKernel3 -b 3.18; then #your_anykernel3_fork
+	if ! git clone -q https://github.com/popoASM-World/AnyKernel3 -b aura; then #your_anykernel3_fork
 		echo -e "\nCloning AnyKernel3 repo failed! Aborting..."
 		exit 1
 	fi
