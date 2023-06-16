@@ -4,8 +4,8 @@
 cd /tmp/rom
 
 # Replace with your kernel link and branch
-KT_LINK=https://github.com/popoA3M/kernel #your_kernel_link
-KT_BRANCH=new #your_branch
+KT_LINK=https://github.com/popoA3M/veux.git #your_kernel_link
+KT_BRANCH=main #your_branch
 
 # Cloning kernel
 git clone $KT_LINK -b $KT_BRANCH --depth=1 --single-branch
@@ -31,7 +31,7 @@ ccache -z
 SECONDS=0 # builtin bash timer
 ZIPNAME="Aura-$(date '+%Y%m%d-%H%M').zip" #your_kernel_name
 TC_DIR="$HOME/tc/proton-clang"
-DEFCONFIG="holland1_defconfig" #your_defconfig
+DEFCONFIG="vendor/veux-qgki-debug_defconfig" #your_defconfig
 export KBUILD_BUILD_USER=popoASM #your_name
 export KBUILD_BUILD_HOST=Cirrus-CI
 export PATH="$TC_DIR/bin:$PATH"
