@@ -31,7 +31,7 @@ ccache -z
 SECONDS=0 # builtin bash timer
 ZIPNAME="Aura-$(date '+%Y%m%d-%H%M').zip" #your_kernel_name
 TC_DIR="$HOME/tc/proton-clang"
-DEFCONFIG="vendor/veux-qgki-debug_defconfig" #your_defconfig
+DEFCONFIG="vendor/veux_defconfig" #your_defconfig
 export KBUILD_BUILD_USER=popoASM #your_name
 export KBUILD_BUILD_HOST=Cirrus-CI
 export PATH="$TC_DIR/bin:$PATH"
